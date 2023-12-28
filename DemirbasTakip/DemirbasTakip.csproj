@@ -1,0 +1,213 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{9734ED9B-2283-4B7E-B5D3-8070B3A90A20}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>DemirbasTakip</RootNamespace>
+    <AssemblyName>DemirbasTakip</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Dapper, Version=1.50.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Dapper.1.50.0\lib\net451\Dapper.dll</HintPath>
+    </Reference>
+    <Reference Include="DapperPlus, Version=1.1.0.2, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\DapperPlus.1.1.0.2\lib\net45\DapperPlus.dll</HintPath>
+    </Reference>
+    <Reference Include="ExcelDataReader, Version=3.6.0.0, Culture=neutral, PublicKeyToken=93517dbe6a4012fa, processorArchitecture=MSIL">
+      <HintPath>..\packages\ExcelDataReader.3.6.0\lib\net45\ExcelDataReader.dll</HintPath>
+    </Reference>
+    <Reference Include="ExcelDataReader.DataSet, Version=3.6.0.0, Culture=neutral, PublicKeyToken=93517dbe6a4012fa, processorArchitecture=MSIL">
+      <HintPath>..\packages\ExcelDataReader.DataSet.3.6.0\lib\net35\ExcelDataReader.DataSet.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Office.Interop.Excel, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Office.Interop.Excel.15.0.4795.1001\lib\net20\Microsoft.Office.Interop.Excel.dll</HintPath>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.DirectoryServices, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="System.IO.Compression" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Z.Dapper.Plus, Version=7.2.1.0, Culture=neutral, PublicKeyToken=59b66d028979105b, processorArchitecture=MSIL">
+      <HintPath>..\packages\Z.Dapper.Plus.7.2.1\lib\net45\Z.Dapper.Plus.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AdminPanel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminPanel.Designer.cs">
+      <DependentUpon>AdminPanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AnaSayfa.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AnaSayfa.Designer.cs">
+      <DependentUpon>AnaSayfa.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Calisanlar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Calisanlar.Designer.cs">
+      <DependentUpon>Calisanlar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Demirbaslar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Demirbaslar.Designer.cs">
+      <DependentUpon>Demirbaslar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Departmanlar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Departmanlar.Designer.cs">
+      <DependentUpon>Departmanlar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ExcelCalisan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ExcelCalisan.Designer.cs">
+      <DependentUpon>ExcelCalisan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ExcelDemirbas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ExcelDemirbas.Designer.cs">
+      <DependentUpon>ExcelDemirbas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ExcelDepartman.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ExcelDepartman.Designer.cs">
+      <DependentUpon>ExcelDepartman.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GirisEkrani.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GirisEkrani.Designer.cs">
+      <DependentUpon>GirisEkrani.cs</DependentUpon>
+    </Compile>
+    <Compile Include="KullanıcıEkle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="KullanıcıEkle.Designer.cs">
+      <DependentUpon>KullanıcıEkle.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SilinenCalisanlar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SilinenCalisanlar.Designer.cs">
+      <DependentUpon>SilinenCalisanlar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SilinenDemirbaslar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SilinenDemirbaslar.Designer.cs">
+      <DependentUpon>SilinenDemirbaslar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Yedekleme.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Yedekleme.Designer.cs">
+      <DependentUpon>Yedekleme.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="AdminPanel.resx">
+      <DependentUpon>AdminPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AnaSayfa.resx">
+      <DependentUpon>AnaSayfa.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Calisanlar.resx">
+      <DependentUpon>Calisanlar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Demirbaslar.resx">
+      <DependentUpon>Demirbaslar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Departmanlar.resx">
+      <DependentUpon>Departmanlar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ExcelCalisan.resx">
+      <DependentUpon>ExcelCalisan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ExcelDemirbas.resx">
+      <DependentUpon>ExcelDemirbas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ExcelDepartman.resx">
+      <DependentUpon>ExcelDepartman.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GirisEkrani.resx">
+      <DependentUpon>GirisEkrani.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="KullanıcıEkle.resx">
+      <DependentUpon>KullanıcıEkle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="SilinenCalisanlar.resx">
+      <DependentUpon>SilinenCalisanlar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SilinenDemirbaslar.resx">
+      <DependentUpon>SilinenDemirbaslar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Yedekleme.resx">
+      <DependentUpon>Yedekleme.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
